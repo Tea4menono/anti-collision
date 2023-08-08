@@ -34,8 +34,6 @@ GPIO.setup(GPIO_ECHO_3, GPIO.IN)
 GPIO.setup(GPIO_TRIGGER_4, GPIO.OUT)
 GPIO.setup(GPIO_ECHO_4, GPIO.IN)
 
-
-
 def distance(trigger, echo):
     try:
         # set Trigger to HIGH
@@ -56,7 +54,6 @@ def distance(trigger, echo):
         # save time of arrival
         while GPIO.input(echo) == 1 and time.time() < timeout:
             StopTime = time.time()
-
 
         # time difference between start and arrival
         TimeElapsed = StopTime - StartTime
