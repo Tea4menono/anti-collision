@@ -77,12 +77,12 @@ if __name__ == '__main__':
             # dist1 = distance(GPIO_TRIGGER_1, GPIO_ECHO_1)
             # print("Measured Distance 1 = %.1f cm" % dist1)
             # time.sleep(0.1) # Adding a short delay
-            # dist2 = distance(GPIO_TRIGGER_2, GPIO_ECHO_2)
-            # print("Measured Distance 2 = %.1f cm" % dist2)
-            # time.sleep(0.1)
+            dist2 = distance(GPIO_TRIGGER_2, GPIO_ECHO_2)
+            print("Measured Distance 2 = %.1f cm" % dist2)
+            time.sleep(0.1)
             dist3 = distance(GPIO_TRIGGER_3, GPIO_ECHO_3)
             print("Measured Distance 3 = %.1f cm" % dist3)
-            # time.sleep(0.1)
+            time.sleep(0.1)
             # dist4 = distance(GPIO_TRIGGER_4, GPIO_ECHO_4)
             # print("Measured Distance 4 = %.1f cm" % dist4)
             time.sleep(1) # Wait for 1 second before next measurement
