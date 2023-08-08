@@ -47,12 +47,12 @@ def distance(trigger, echo):
         StartTime = time.time()
         StopTime = time.time()
 
-        timeout = time.time() + 0.1 # Adding a timeout to avoid infinite loop
+        timeout = time.time() + 0.5 # Adding a timeout to avoid infinite loop
         # save StartTime
         while GPIO.input(echo) == 0 and time.time() < timeout:
             StartTime = time.time()
 
-        timeout = time.time() + 0.1 # Resetting timeout
+        timeout = time.time() + 0.5 # Resetting timeout
         # save time of arrival
         while GPIO.input(echo) == 1 and time.time() < timeout:
             StopTime = time.time()
@@ -60,7 +60,6 @@ def distance(trigger, echo):
 
         # time difference between start and arrival
         TimeElapsed = StopTime - StartTime
-        print(StartTime,StopTime,TimeElapsed)
 
         # multiply with the sonic speed (34300 cm/s)
         # and divide by 2, because there and back
@@ -77,9 +76,9 @@ if __name__ == '__main__':
             # dist1 = distance(GPIO_TRIGGER_1, GPIO_ECHO_1)
             # print("Measured Distance 1 = %.1f cm" % dist1)
             # time.sleep(0.1) # Adding a short delay
-            dist2 = distance(GPIO_TRIGGER_2, GPIO_ECHO_2)
-            print("Measured Distance 2 = %.1f cm" % dist2)
-            time.sleep(0.1)
+            # dist2 = distance(GPIO_TRIGGER_2, GPIO_ECHO_2)
+            # print("Measured Distance 2 = %.1f cm" % dist2)
+            # time.sleep(0.1)
             dist3 = distance(GPIO_TRIGGER_3, GPIO_ECHO_3)
             print("Measured Distance 3 = %.1f cm" % dist3)
             time.sleep(0.1)
