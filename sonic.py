@@ -69,12 +69,12 @@ if __name__ == '__main__':
         while True:
             dist1 = distance(GPIO_TRIGGER_1,GPIO_ECHO_1)
             print("Measured Distance = %.1f cm" % dist1)
-            dist2 = distance(GPIO_TRIGGER_2,GPIO_ECHO_2)
-            print("Measured Distance = %.1f cm" % dist2)
-            dist3 = distance(GPIO_TRIGGER_3,GPIO_ECHO_3)
-            print("Measured Distance = %.1f cm" % dist3)
-            dist4 = distance(GPIO_TRIGGER_4,GPIO_ECHO_4)
-            print("Measured Distance = %.1f cm" % dist4)
+            # dist2 = distance(GPIO_TRIGGER_2,GPIO_ECHO_2)
+            # print("Measured Distance = %.1f cm" % dist2)
+            # dist3 = distance(GPIO_TRIGGER_3,GPIO_ECHO_3)
+            # print("Measured Distance = %.1f cm" % dist3)
+            # dist4 = distance(GPIO_TRIGGER_4,GPIO_ECHO_4)
+            # print("Measured Distance = %.1f cm" % dist4)
             time.sleep(1)
 
         # Reset by pressing CTRL + C
