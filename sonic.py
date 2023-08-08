@@ -13,9 +13,10 @@ GPIO_TRIGGER_2  = 24
 GPIO_ECHO_2 = 16
 
 
-GPIO_TRIGGER_3 = 25
-GPIO_ECHO_3 = 20
-
+# GPIO_TRIGGER_3 = 25
+# GPIO_ECHO_3 = 20
+GPIO_TRIGGER_3 = 8
+GPIO_ECHO_3 = 21
 
 GPIO_TRIGGER_4 = 8
 GPIO_ECHO_4 = 21
@@ -47,12 +48,12 @@ def distance(trigger, echo):
         StartTime = time.time()
         StopTime = time.time()
 
-        timeout = time.time() # Adding a timeout to avoid infinite loop
+        timeout = time.time()+0.1 # Adding a timeout to avoid infinite loop
         # save StartTime
         while GPIO.input(echo) == 0 and time.time() < timeout:
             StartTime = time.time()
 
-        timeout = time.time() # Resetting timeout
+        timeout = time.time()+0.1 # Resetting timeout
         # save time of arrival
         while GPIO.input(echo) == 1 and time.time() < timeout:
             StopTime = time.time()
