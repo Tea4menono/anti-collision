@@ -83,7 +83,7 @@ if __name__ == '__main__':
             dist4 = distance(GPIO_TRIGGER_4, GPIO_ECHO_4)
             # print("Measured Distance 4 = %.1f cm" % dist4)
 
-            print(dist1,dist2,dist3,dist4)
+            print(("Measured Distance 1 = %.1f cm %.1f cm %.1f cm %.1f cm" % dist1,dist2,dist3,dist4)
 
             time.sleep(1) # Wait for 1 second before next measurement
 
