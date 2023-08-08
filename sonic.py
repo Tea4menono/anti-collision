@@ -47,12 +47,12 @@ def distance(trigger, echo):
         StartTime = time.time()
         StopTime = time.time()
 
-        timeout = time.time() + 0.5 # Adding a timeout to avoid infinite loop
+        timeout = time.time() # Adding a timeout to avoid infinite loop
         # save StartTime
         while GPIO.input(echo) == 0 and time.time() < timeout:
             StartTime = time.time()
 
-        timeout = time.time() + 0.5 # Resetting timeout
+        timeout = time.time() # Resetting timeout
         # save time of arrival
         while GPIO.input(echo) == 1 and time.time() < timeout:
             StopTime = time.time()
